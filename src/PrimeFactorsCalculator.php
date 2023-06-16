@@ -35,6 +35,7 @@ class PrimeFactorsCalculator
                 $divisorNumber++;
             }
         }
+
         if ($divisorNumber > 2) {
             return false;
         }
