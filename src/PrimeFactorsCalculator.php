@@ -15,15 +15,11 @@ class PrimeFactorsCalculator
     public function calculate(): array
     {
         $providedNumber = $this->numberProvider->getNumber();
-        for ($i = 2; $i <= $providedNumber; $i = $i + 1) {
-            if ($providedNumber % $i == 0) {
-                //Añadimos $i al array al ser divisor de $number.
+        for ($i = 2; $i <= $providedNumber; $i++) {
+            if ($providedNumber % $i == 0 and isPrime($providedNumber)) {
                 array_push($this->primeFactors, $i);
             }
         }
-
-        //El 1 al tener un solo divisor y ser el mismo, no devolvemos porque no contemplamos su caso.
-
         return $this->primeFactors;
     }
 
@@ -36,7 +32,7 @@ class PrimeFactorsCalculator
             }
         }
 
-        if ($divisorNumber > 2) {
+        if ($divisorNumber > 2 or $divisorNumber == 0) {
             return false;
         }
         return true;

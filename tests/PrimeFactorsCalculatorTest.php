@@ -64,4 +64,11 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
         $this->assertFalse($result);
     }
+
+    public function isPrimeReturnsFalseWhen0IsProvided()
+    {
+        $result = $this->primeCalculator->isPrime(0);
+
+        $this->assertFalse($result);
+    }
 }
