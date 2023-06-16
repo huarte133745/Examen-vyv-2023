@@ -37,7 +37,7 @@ final class PrimeFactorsCalculatorTest extends TestCase
      * @test
      * @SuppressWarnings(PHPMD.StaticAccess);
      */
-    public function returnsEmptyArrayWhen1IsProvided()
+    public function calculateReturnsEmptyArrayWhen1IsProvided()
     {
         $this->mockNumberProvider
             ->expects('getNumber')
