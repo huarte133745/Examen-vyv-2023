@@ -116,6 +116,22 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
+     */
+    public function calculateReturnsPrimeArrayWhen23IsProvided()
+    {
+        $this->mockNumberProvider
+            ->expects('getNumber')
+            ->with()
+            ->once()
+            ->andReturn(23);
+
+        $result = $this->primeCalculator->Calculate();
+
+        $this->assertEquals([23], $result);
+    }
+
+    /**
+     * @test
      * @SuppressWarnings(PHPMD.StaticAccess);
      */
     public function isPrimeReturnsTrueWhen7IsProvided()
