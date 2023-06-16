@@ -36,7 +36,6 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
-     * @SuppressWarnings(PHPMD.StaticAccess);
      */
     public function calculateReturnsEmptyArrayWhen1IsProvided()
     {
@@ -53,7 +52,6 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
-     * @SuppressWarnings(PHPMD.StaticAccess);
      */
     public function calculateReturnsPrimeArrayWhen2IsProvided()
     {
@@ -70,7 +68,6 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
-     * @SuppressWarnings(PHPMD.StaticAccess);
      */
     public function calculateReturnsPrimeArrayWhen4IsProvided()
     {
@@ -99,6 +96,22 @@ final class PrimeFactorsCalculatorTest extends TestCase
         $result = $this->primeCalculator->Calculate();
 
         $this->assertEquals([2,3], $result);
+    }
+
+    /**
+     * @test
+     */
+    public function calculateReturnsPrimeArrayWhen16IsProvided()
+    {
+        $this->mockNumberProvider
+            ->expects('getNumber')
+            ->with()
+            ->once()
+            ->andReturn(16);
+
+        $result = $this->primeCalculator->Calculate();
+
+        $this->assertEquals([2,2,2,2], $result);
     }
 
     /**
