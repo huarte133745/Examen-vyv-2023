@@ -51,6 +51,10 @@ final class PrimeFactorsCalculatorTest extends TestCase
         $this->assertEquals([], $result);
     }
 
+    /**
+     * @test
+     * @SuppressWarnings(PHPMD.StaticAccess);
+     */
     public function isPrimeReturnsTrueWhen7IsProvided()
     {
         $result = $this->primeCalculator->isPrime(7);
@@ -58,6 +62,10 @@ final class PrimeFactorsCalculatorTest extends TestCase
         $this->assertTrue($result);
     }
 
+    /**
+     * @test
+     * @SuppressWarnings(PHPMD.StaticAccess);
+     */
     public function isPrimeReturnsFalseWhen8IsProvided()
     {
         $result = $this->primeCalculator->isPrime(8);
@@ -65,6 +73,10 @@ final class PrimeFactorsCalculatorTest extends TestCase
         $this->assertFalse($result);
     }
 
+    /**
+     * @test
+     * @SuppressWarnings(PHPMD.StaticAccess);
+     */
     public function isPrimeReturnsFalseWhen0IsProvided()
     {
         $result = $this->primeCalculator->isPrime(0);

@@ -17,7 +17,7 @@ class PrimeFactorsCalculator
         $providedNumber = $this->numberProvider->getNumber();
         for ($i = 2; $i <= $providedNumber; $i++) {
             if ($providedNumber % $i == 0 and isPrime($providedNumber)) {
-                array_push($this->primeFactors, $i);
+                $this->primeFactors[] = $i;
             }
         }
         return $this->primeFactors;
