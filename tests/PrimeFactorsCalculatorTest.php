@@ -132,7 +132,6 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
-     * @SuppressWarnings(PHPMD.StaticAccess);
      */
     public function isPrimeReturnsTrueWhen7IsProvided()
     {
@@ -143,7 +142,6 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
     /**
      * @test
-     * @SuppressWarnings(PHPMD.StaticAccess);
      */
     public function isPrimeReturnsFalseWhen8IsProvided()
     {
