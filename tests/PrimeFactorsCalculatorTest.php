@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 final class PrimeFactorsCalculatorTest extends TestCase
 {
     private $mockNumberProvider;
-    private $primeCalculator;
+    private PrimeFactorsCalculator $primeCalculator;
 
     /**
      * @SuppressWarnings(PHPMD.StaticAccess);
