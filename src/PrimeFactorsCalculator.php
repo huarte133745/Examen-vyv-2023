@@ -15,9 +15,11 @@ class PrimeFactorsCalculator
     public function calculate(): array
     {
         $providedNumber = $this->numberProvider->getNumber();
+        $this->primeFactors = [];
         for ($i = 2; $i <= $providedNumber; $i++) {
-            if ($providedNumber % $i == 0 and $this->isPrime($providedNumber)) {
+            while ($providedNumber % $i === 0 and $this->isPrime($i)) {
                 array_push($this->primeFactors, $i);
+                $providedNumber = $providedNumber / $i;
             }
         }
         return $this->primeFactors;
