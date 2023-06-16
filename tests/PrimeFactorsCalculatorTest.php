@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 final class PrimeFactorsCalculatorTest extends TestCase
 {
     private $mockNumberProvider;
+    private $primeCalculator;
 
     /**
      * @SuppressWarnings(PHPMD.StaticAccess);
@@ -21,7 +22,7 @@ final class PrimeFactorsCalculatorTest extends TestCase
         parent::setUp();
         $this->mockNumberProvider = Mockery::mock(NumberProvider::class);
 
-        $this->primeFactorsCalculator = new PrimeFactorsCalculator($this->mockNumberProvider);
+        $this->primeCalculator = new PrimeFactorsCalculator($this->mockNumberProvider);
     }
 
     /**
@@ -45,8 +46,15 @@ final class PrimeFactorsCalculatorTest extends TestCase
             ->once()
             ->andReturn(1);
 
-        $result = $this->primeFactorsCalculator->Calculate();
+        $result = $this->primeCalculator->Calculate();
 
         $this->assertEquals([], $result);
+    }
+
+    public function isPrimeReturnsTrueWhen7IsProvided()
+    {
+        $result = $this->primeCalculator->isPrime(7);
+
+        $this->assertTrue($result);
     }
 }
