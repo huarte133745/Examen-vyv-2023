@@ -16,14 +16,14 @@ class PrimeFactorsCalculator
     {
         $providedNumber = $this->numberProvider->getNumber();
         for ($i = 2; $i <= $providedNumber; $i++) {
-            if ($providedNumber % $i == 0 and isPrime($providedNumber)) {
-                $this->primeFactors[] = $i;
+            if ($providedNumber % $i == 0 and $this->isPrime($providedNumber)) {
+                array_push($this->primeFactors, $i);
             }
         }
         return $this->primeFactors;
     }
 
-    public function isPrime(int $number)
+    public function isPrime(int $number): bool
     {
         $divisorNumber = 0;
         for ($i = 1; $i <= $number; $i++) {
