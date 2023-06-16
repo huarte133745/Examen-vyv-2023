@@ -57,4 +57,11 @@ final class PrimeFactorsCalculatorTest extends TestCase
 
         $this->assertTrue($result);
     }
+
+    public function isPrimeReturnsFalseWhen8IsProvided()
+    {
+        $result = $this->primeCalculator->isPrime(8);
+
+        $this->assertFalse($result);
+    }
 }
