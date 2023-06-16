@@ -24,7 +24,7 @@ Repositorio para el examen de verificación y validación del software 2023 de h
 
 ---
 
-##Calculador de factores primos de un número - Prime Factors Calculator
+## Calculador de factores primos de un número - Prime Factors Calculator
 
 Queremos crear un programa que calcule los factores primos de un número que nos provee un servicio externo.
 
